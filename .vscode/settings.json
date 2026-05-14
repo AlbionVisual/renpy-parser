@@ -1,0 +1,18 @@
+{
+  "python.formatting.provider": "autopep8",
+  "python.formatting.autopep8Args": [
+    "--ignore=E402"
+  ],
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv311/bin/python",
+  "python.terminal.activateEnvironment": true,
+  "terminal.integrated.env.linux": {
+    "TF_CPP_MIN_LOG_LEVEL": "2",
+    "ESSENTIA_LOGGING_LEVEL": "ERROR"
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "never"
+    }
+  }
+}
+

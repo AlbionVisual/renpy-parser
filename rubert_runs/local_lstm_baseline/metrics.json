@@ -1,0 +1,78 @@
+{
+  "script": "lstm",
+  "train_metrics": {
+    "mae_macro": 0.6012671349030368,
+    "rmse_macro": 0.9493926167488098,
+    "r2_macro": -0.0016069905832409859,
+    "medae_macro": 0.4504797134111868,
+    "evs_macro": 0.0029545805882662535,
+    "max_abs_macro": 9.100764000415802,
+    "abs_p95_macro_mean": 1.53514907487668,
+    "mae_across_columns_p95": 0.9817682268268864,
+    "column_pearson_mean": 0.05414873198439688,
+    "column_pearson_median": 0.028766321094330426,
+    "column_pearson_across_columns_p95": 0.30940145521970197,
+    "column_pearson_nan_frac": 0.0,
+    "row_cosine_mean": 0.99192281955566,
+    "row_cosine_median": 0.9969967603683472,
+    "r2_pooled": -0.005559930710865801
+  },
+  "val_metrics": {
+    "mae_macro": 0.6421718214003639,
+    "rmse_macro": 0.9161160588264465,
+    "r2_macro": -0.021730232611298562,
+    "medae_macro": 0.49967944119271124,
+    "evs_macro": 0.002454322762787342,
+    "max_abs_macro": 3.7567293526604773,
+    "abs_p95_macro_mean": 1.933532574521373,
+    "mae_across_columns_p95": 1.0041991592593007,
+    "column_pearson_mean": 0.05803860032434377,
+    "column_pearson_median": 0.04401789362058181,
+    "column_pearson_across_columns_p95": 0.33744207064858267,
+    "column_pearson_nan_frac": 0.0,
+    "row_cosine_mean": 0.9912995526273211,
+    "row_cosine_median": 0.9965293407440186,
+    "r2_pooled": -0.006034943351482358
+  },
+  "test_metrics": {
+    "mae_macro": 0.670820839912748,
+    "rmse_macro": 1.015143632888794,
+    "r2_macro": -2112628873.1139793,
+    "medae_macro": 0.46499437621823747,
+    "evs_macro": -4845641.5,
+    "max_abs_macro": 3.0459919655695558,
+    "abs_p95_macro_mean": 2.2912698666471987,
+    "mae_across_columns_p95": 1.0065682571438643,
+    "column_pearson_mean": 0.03834165244964492,
+    "column_pearson_median": 0.018399333490806597,
+    "column_pearson_across_columns_p95": 0.31872554040101414,
+    "column_pearson_nan_frac": 0.0,
+    "row_cosine_mean": 0.9917656773940111,
+    "row_cosine_median": 0.9969938099384308,
+    "r2_pooled": -0.08190333516260395
+  },
+  "retrieval": {
+    "rmse": {
+      "hits": 451,
+      "totals": 780,
+      "skipped": 0
+    },
+    "mae": {
+      "hits": 406,
+      "totals": 780,
+      "skipped": 0
+    },
+    "cosine": {
+      "hits": 433,
+      "totals": 780,
+      "skipped": 0
+    }
+  },
+  "retrieval_column_mask": false,
+  "retrieval_column_filter": null,
+  "retrieval_mask_from_split": "val",
+  "retrieval_n_columns": null,
+  "epochs_ran": 5,
+  "best_val_mae_norm_macro": 0.5120058059692383,
+  "train_wall_seconds": 29.34700303000136
+}

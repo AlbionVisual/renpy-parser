@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Lyrata: AudioEnricher (quiet TF/CUDA spam)",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/music_scripts/AudioEnricher.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "python": "${workspaceFolder}/.venv311/bin/python",
+      "env": {
+        "TF_CPP_MIN_LOG_LEVEL": "2",
+        "ESSENTIA_LOGGING_LEVEL": "ERROR"
+      }
+    },
+    {
+      "name": "Lyrata: AudioEnricher (task: filter TF/CUDA spam)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": [
+        "-lc",
+        "cd \"${workspaceFolder}\" && source .venv311/bin/activate && python music_scripts/AudioEnricher.py 2> >(grep -vi -E \"cudart|cublas|cufft|curand|cusolver|cusparse|cudnn\" | grep -i -E \"error|fatal|traceback\" >&2)"
+      ],
+      "console": "integratedTerminal"
+    }
+  ]
+}
+

@@ -1,0 +1,25 @@
+\chapter*{ПРИЛОЖЕНИЕ А}
+\addcontentsline{toc}{chapter}{ПРИЛОЖЕНИЕ А}
+
+\section*{\centering Исходный код работы}
+\label{app:repo-structure}
+
+\begin{enumerate}[label=\textbf{\arabic*.},wide=0pt,leftmargin=*]
+\item\label{appa:elem1}\hypertarget{appa-i-1}{}\textbf{Корень репозитория.} Полный код проекта, парсер, скрипты, курсовой материал: \href{https://github.com/albionvisual/renpy-parser}{\nolinkurl{https://github.com/albionvisual/renpy-parser}}
+
+\item\label{appa:elem2}\hypertarget{appa-i-2}{}\textbf{Канал обсуждения пет-проекта Lyrata (Telegram).} \href{https://t.me/LyrataAI}{\nolinkurl{https://t.me/LyrataAI}}
+
+\item\label{appa:elem3}\hypertarget{appa-i-3}{}\textbf{Манифест прогонов} \texttt{manifest.jsonl} в основной ветке: \href{https://github.com/albionvisual/renpy-parser/blob/main/manifest.jsonl}{\nolinkurl{https://github.com/albionvisual/renpy-parser/blob/main/manifest.jsonl}}
+
+\item\label{appa:elem4}\hypertarget{appa-i-4}{}\textbf{Скрипты обучения нейросетевых конфигураций} (каталог \path{text_scripts/ml_scripts/}): \href{https://github.com/albionvisual/renpy-parser/tree/main/text_scripts/ml_scripts}{\nolinkurl{https://github.com/albionvisual/renpy-parser/tree/main/text_scripts/ml_scripts}}
+
+\item\label{appa:elem5}\hypertarget{appa-i-5}{}\textbf{Сохранённые прогоны} (дерево \path{rubert_runs/}, каталоги \path{run_*}, журналы, \texttt{metrics.json}, \texttt{config.json}). \href{https://github.com/albionvisual/renpy-parser/tree/main/rubert_runs}{\nolinkurl{https://github.com/albionvisual/renpy-parser/tree/main/rubert_runs}}
+
+\item\label{appa:elem6}\hypertarget{appa-i-6}{}\textbf{Вспомогательные утилиты} (агрегация таблицы метрик, построение диаграмм hit rates; каталог \path{scripts/}). \href{https://github.com/albionvisual/renpy-parser/tree/main/scripts}{\nolinkurl{https://github.com/albionvisual/renpy-parser/tree/main/scripts}}
+
+\item\label{appa:elem7}\hypertarget{appa-i-7}{}\textbf{Исходник настоящей курсовой} (\path{coursework-latex/lyrata-kurs/}, \texttt{main.tex}, сгенерированные таблицы и подкаталог \path{images/}). \href{https://github.com/albionvisual/renpy-parser/tree/main/coursework-latex/lyrata-kurs}{\nolinkurl{https://github.com/albionvisual/renpy-parser/tree/main/coursework-latex/lyrata-kurs}}
+
+\item\label{appa:elem8}\hypertarget{appa-i-8}{}\textbf{Пример сохранённого прогона} \path{rubert_runs/run_002_lstm/} (\texttt{stdout.log}, \texttt{metrics.json}, конфигурация основной серии LSTM~(1)): \href{https://github.com/albionvisual/renpy-parser/tree/main/rubert_runs/run_002_lstm}{\nolinkurl{https://github.com/albionvisual/renpy-parser/tree/main/rubert_runs/run_002_lstm}}
+
+\item\label{appa:elem9}\hypertarget{appa-i-9}{}\textbf{Скрипт построения кривых обучения} по журналам \texttt{stdout.log}: \texttt{plot\_training\_stdout\_curves.py} в каталоге \path{scripts/}. \href{https://github.com/albionvisual/renpy-parser/blob/main/scripts/plot_training_stdout_curves.py}{\nolinkurl{https://github.com/albionvisual/renpy-parser/blob/main/scripts/plot_training_stdout_curves.py}}
+\end{enumerate}

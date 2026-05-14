@@ -1,0 +1,150 @@
+tf_window raw_emb_dim 768 embedding_lags 8 in_dim 6912 rows 19174
+held_out_games_seed fixed 17
+
+TRAIN/TEST SPLIT BEFORE TRAINING
+seed 41
+split mode leave_games_out
+split test_fraction 0.2
+split test_games requested 3
+split held_out_games 3 ['MilgramSubstitution-DEMO-1.4.2-pc', 'ScarredSoul-0.2.0.0-pc', 'TheJesterAndThePrince_RU-2.5-pc']
+train rows 18394 games covered 38
+test rows 780 games covered 3
+train_test_index_overlap 0
+tune_split val_fraction 0.1
+refit_best_on_train_plus_val False
+tf_window val_split tail tune rows 16537 val rows 1857 games tune 38 games val 38
+tf_window index_overlap tune_val 0 tune_test 0 val_test 0
+/content/repo/text_scripts/ml_scripts/train_rubert_to_music_transformer_window.py:81: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.enc = nn.TransformerEncoder(enc_layer, int(nlayers))
+tf_window device cuda in_dim 6912 out_dim 320 tf_window 512 tf_d_model 256 tf_layers 4 tf_heads 4 tf_dim_ff 1024 params 5011008
+/usr/local/lib/python3.12/dist-packages/torch/nn/modules/transformer.py:431: UserWarning: Support for mismatched src_key_padding_mask and mask is deprecated. Use same type for both instead.
+  src_key_padding_mask = F._canonical_mask(
+epoch 1 train_mse 1.778566 train_mae_norm_macro 0.897575 val_mae_norm_macro 1.870225 val_minus_train_mae_norm 0.972649 best_val_mae_norm_macro 1.870225 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 2 train_mse 5.743592 train_mae_norm_macro 0.694824 val_mae_norm_macro 1.198942 val_minus_train_mae_norm 0.504118 best_val_mae_norm_macro 1.198942 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 3 train_mse 2.638343 train_mae_norm_macro 0.620272 val_mae_norm_macro 0.960282 val_minus_train_mae_norm 0.340011 best_val_mae_norm_macro 0.960282 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 4 train_mse 1.869115 train_mae_norm_macro 0.572791 val_mae_norm_macro 0.833875 val_minus_train_mae_norm 0.261084 best_val_mae_norm_macro 0.833875 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 5 train_mse 1.52712 train_mae_norm_macro 0.534641 val_mae_norm_macro 0.711279 val_minus_train_mae_norm 0.176638 best_val_mae_norm_macro 0.711279 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 7 train_mse 1.315083 train_mae_norm_macro 0.531273 val_mae_norm_macro 0.689551 val_minus_train_mae_norm 0.158278 best_val_mae_norm_macro 0.689551 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 8 train_mse 1.263728 train_mae_norm_macro 0.51557 val_mae_norm_macro 0.628299 val_minus_train_mae_norm 0.112729 best_val_mae_norm_macro 0.628299 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 9 train_mse 1.173615 train_mae_norm_macro 0.509034 val_mae_norm_macro 0.607919 val_minus_train_mae_norm 0.098886 best_val_mae_norm_macro 0.607919 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 10 train_mse 1.132954 train_mae_norm_macro 0.505875 val_mae_norm_macro 0.602026 val_minus_train_mae_norm 0.096151 best_val_mae_norm_macro 0.602026 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 11 train_mse 1.118944 train_mae_norm_macro 0.498861 val_mae_norm_macro 0.589264 val_minus_train_mae_norm 0.090403 best_val_mae_norm_macro 0.589264 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 12 train_mse 1.097521 train_mae_norm_macro 0.490917 val_mae_norm_macro 0.569593 val_minus_train_mae_norm 0.078676 best_val_mae_norm_macro 0.569593 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 13 train_mse 1.067045 train_mae_norm_macro 0.4826 val_mae_norm_macro 0.546479 val_minus_train_mae_norm 0.063879 best_val_mae_norm_macro 0.546479 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 14 train_mse 1.038813 train_mae_norm_macro 0.475737 val_mae_norm_macro 0.527939 val_minus_train_mae_norm 0.052202 best_val_mae_norm_macro 0.527939 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 15 train_mse 1.015576 train_mae_norm_macro 0.471502 val_mae_norm_macro 0.517193 val_minus_train_mae_norm 0.045691 best_val_mae_norm_macro 0.517193 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 16 train_mse 0.998188 train_mae_norm_macro 0.470104 val_mae_norm_macro 0.511719 val_minus_train_mae_norm 0.041615 best_val_mae_norm_macro 0.511719 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 17 train_mse 0.988612 train_mae_norm_macro 0.468324 val_mae_norm_macro 0.501714 val_minus_train_mae_norm 0.03339 best_val_mae_norm_macro 0.501714 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 18 train_mse 0.976102 train_mae_norm_macro 0.465477 val_mae_norm_macro 0.490374 val_minus_train_mae_norm 0.024897 best_val_mae_norm_macro 0.490374 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 19 train_mse 0.962424 train_mae_norm_macro 0.462304 val_mae_norm_macro 0.482159 val_minus_train_mae_norm 0.019855 best_val_mae_norm_macro 0.482159 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 20 train_mse 0.950817 train_mae_norm_macro 0.459169 val_mae_norm_macro 0.475738 val_minus_train_mae_norm 0.016569 best_val_mae_norm_macro 0.475738 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 21 train_mse 0.939092 train_mae_norm_macro 0.455408 val_mae_norm_macro 0.469373 val_minus_train_mae_norm 0.013966 best_val_mae_norm_macro 0.469373 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 22 train_mse 0.925343 train_mae_norm_macro 0.453135 val_mae_norm_macro 0.462316 val_minus_train_mae_norm 0.009181 best_val_mae_norm_macro 0.462316 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 23 train_mse 0.911996 train_mae_norm_macro 0.450947 val_mae_norm_macro 0.453197 val_minus_train_mae_norm 0.00225 best_val_mae_norm_macro 0.453197 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 24 train_mse 0.900808 train_mae_norm_macro 0.448405 val_mae_norm_macro 0.444762 val_minus_train_mae_norm -0.003643 best_val_mae_norm_macro 0.444762 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 25 train_mse 0.88945 train_mae_norm_macro 0.446251 val_mae_norm_macro 0.442825 val_minus_train_mae_norm -0.003426 best_val_mae_norm_macro 0.442825 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 26 train_mse 0.880207 train_mae_norm_macro 0.445732 val_mae_norm_macro 0.43265 val_minus_train_mae_norm -0.013081 best_val_mae_norm_macro 0.43265 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 28 train_mse 0.869659 train_mae_norm_macro 0.443948 val_mae_norm_macro 0.426697 val_minus_train_mae_norm -0.017252 best_val_mae_norm_macro 0.426697 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 30 train_mse 0.866591 train_mae_norm_macro 0.445363 val_mae_norm_macro 0.426744 val_minus_train_mae_norm -0.018619 best_val_mae_norm_macro 0.426697 patience_val 2 / 15 patience_overfit_gap 0 / off
+epoch 31 train_mse 0.857092 train_mae_norm_macro 0.439447 val_mae_norm_macro 0.425316 val_minus_train_mae_norm -0.014132 best_val_mae_norm_macro 0.425316 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 33 train_mse 0.837692 train_mae_norm_macro 0.443004 val_mae_norm_macro 0.422222 val_minus_train_mae_norm -0.020783 best_val_mae_norm_macro 0.422222 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 35 train_mse 0.824178 train_mae_norm_macro 0.438799 val_mae_norm_macro 0.42736 val_minus_train_mae_norm -0.011439 best_val_mae_norm_macro 0.422222 patience_val 2 / 15 patience_overfit_gap 0 / off
+epoch 36 train_mse 0.820666 train_mae_norm_macro 0.44049 val_mae_norm_macro 0.418062 val_minus_train_mae_norm -0.022428 best_val_mae_norm_macro 0.418062 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 39 train_mse 0.808747 train_mae_norm_macro 0.439532 val_mae_norm_macro 0.415275 val_minus_train_mae_norm -0.024257 best_val_mae_norm_macro 0.415275 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 40 train_mse 0.808642 train_mae_norm_macro 0.436807 val_mae_norm_macro 0.41786 val_minus_train_mae_norm -0.018947 best_val_mae_norm_macro 0.415275 patience_val 1 / 15 patience_overfit_gap 0 / off
+epoch 42 train_mse 0.797972 train_mae_norm_macro 0.438199 val_mae_norm_macro 0.411552 val_minus_train_mae_norm -0.026647 best_val_mae_norm_macro 0.411552 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 45 train_mse 0.786619 train_mae_norm_macro 0.437108 val_mae_norm_macro 0.40992 val_minus_train_mae_norm -0.027188 best_val_mae_norm_macro 0.40992 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 48 train_mse 0.777111 train_mae_norm_macro 0.436385 val_mae_norm_macro 0.406726 val_minus_train_mae_norm -0.029658 best_val_mae_norm_macro 0.406726 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 50 train_mse 0.772606 train_mae_norm_macro 0.434391 val_mae_norm_macro 0.406821 val_minus_train_mae_norm -0.027569 best_val_mae_norm_macro 0.406726 patience_val 2 / 15 patience_overfit_gap 0 / off
+epoch 51 train_mse 0.76814 train_mae_norm_macro 0.434831 val_mae_norm_macro 0.403745 val_minus_train_mae_norm -0.031085 best_val_mae_norm_macro 0.403745 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 54 train_mse 0.76044 train_mae_norm_macro 0.433786 val_mae_norm_macro 0.403433 val_minus_train_mae_norm -0.030353 best_val_mae_norm_macro 0.403433 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 55 train_mse 0.758885 train_mae_norm_macro 0.43362 val_mae_norm_macro 0.409245 val_minus_train_mae_norm -0.024375 best_val_mae_norm_macro 0.403433 patience_val 1 / 15 patience_overfit_gap 0 / off
+epoch 56 train_mse 0.756546 train_mae_norm_macro 0.4333 val_mae_norm_macro 0.40216 val_minus_train_mae_norm -0.03114 best_val_mae_norm_macro 0.40216 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 59 train_mse 0.749599 train_mae_norm_macro 0.434296 val_mae_norm_macro 0.401738 val_minus_train_mae_norm -0.032558 best_val_mae_norm_macro 0.401738 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 60 train_mse 0.748741 train_mae_norm_macro 0.433234 val_mae_norm_macro 0.405813 val_minus_train_mae_norm -0.027421 best_val_mae_norm_macro 0.401738 patience_val 1 / 15 patience_overfit_gap 0 / off
+epoch 61 train_mse 0.745332 train_mae_norm_macro 0.432661 val_mae_norm_macro 0.400572 val_minus_train_mae_norm -0.032089 best_val_mae_norm_macro 0.400572 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 62 train_mse 0.740869 train_mae_norm_macro 0.432456 val_mae_norm_macro 0.400142 val_minus_train_mae_norm -0.032313 best_val_mae_norm_macro 0.400142 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 65 train_mse 0.736716 train_mae_norm_macro 0.432346 val_mae_norm_macro 0.404627 val_minus_train_mae_norm -0.027719 best_val_mae_norm_macro 0.400142 patience_val 3 / 15 patience_overfit_gap 0 / off
+epoch 67 train_mse 0.729614 train_mae_norm_macro 0.432391 val_mae_norm_macro 0.399861 val_minus_train_mae_norm -0.032529 best_val_mae_norm_macro 0.399861 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 69 train_mse 0.727654 train_mae_norm_macro 0.432818 val_mae_norm_macro 0.399577 val_minus_train_mae_norm -0.03324 best_val_mae_norm_macro 0.399577 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 70 train_mse 0.72654 train_mae_norm_macro 0.4324 val_mae_norm_macro 0.405439 val_minus_train_mae_norm -0.026961 best_val_mae_norm_macro 0.399577 patience_val 1 / 15 patience_overfit_gap 0 / off
+epoch 75 train_mse 0.717055 train_mae_norm_macro 0.432155 val_mae_norm_macro 0.405538 val_minus_train_mae_norm -0.026617 best_val_mae_norm_macro 0.399577 patience_val 6 / 15 patience_overfit_gap 0 / off
+epoch 80 train_mse 0.715458 train_mae_norm_macro 0.432935 val_mae_norm_macro 0.400858 val_minus_train_mae_norm -0.032077 best_val_mae_norm_macro 0.399577 patience_val 11 / 15 patience_overfit_gap 0 / off
+early stop: val metric patience exhausted
+tf_window train_wall_seconds 298.022 stopped_epoch 84 best_val_mae_norm_macro 0.399577
+
+Transformer-window Regression metrics ON TRAIN (fit set, denormalized Y)
+mae mean 0.551867 median 0.126123 p90_across_columns 0.797864
+rmse mean 0.904005 median 0.451187 p90_across_columns 0.933979
+r2 mean 0.075574 median 0.000685 p90_across_columns 0.290444
+r2_pooled 0.012016 note per-column r2 mean is mean of per-target R2; a few near-constant y columns (tiny ss_tot) make R2 explode negative; median and r2_pooled are safer headlines
+medae_column mean 0.420185 median 0.049592 p90_across_columns 0.83266
+abs_error_p90_within_column mean 1.418523 median 0.398087 p90_across_columns 1.750013
+explained_variance mean 0.094326 median 0.001918 p90_across_columns 0.354352
+max_abs_column mean 9.039132 median 5.596315 p90_across_columns 9.638274
+column_pearson mean 0.21018 median 0.048268 p90_across_columns 0.64656 fraction_nan 0.0
+row_cosine mean 0.992647 median 0.997855 p90_across_rows 0.999501
+/usr/local/lib/python3.12/dist-packages/torch/nn/modules/transformer.py:431: UserWarning: Support for mismatched src_key_padding_mask and mask is deprecated. Use same type for both instead.
+  src_key_padding_mask = F._canonical_mask(
+
+Transformer-window metrics ON VALIDATION (denormalized Y)
+mae mean 0.488858 median 0.159239 p90_across_columns 0.524884
+rmse mean 0.768889 median 0.432003 p90_across_columns 0.840929
+r2 mean 0.201637 median 0.09328 p90_across_columns 0.632746
+r2_pooled 0.174031 note per-column r2 mean is mean of per-target R2; a few near-constant y columns (tiny ss_tot) make R2 explode negative; median and r2_pooled are safer headlines
+medae_column mean 0.332319 median 0.068996 p90_across_columns 0.321589
+abs_error_p90_within_column mean 1.609544 median 0.980524 p90_across_columns 1.834157
+explained_variance mean 0.229798 median 0.125845 p90_across_columns 0.650096
+max_abs_column mean 3.740179 median 2.442409 p90_across_columns 4.575262
+column_pearson mean 0.445838 median 0.386601 p90_across_columns 0.8096 fraction_nan 0.0
+row_cosine mean 0.993114 median 0.998485 p90_across_rows 0.999851
+
+Transformer-window Regression metrics ON TEST ONLY
+mae mean 0.530645 median 0.314519 p90_across_columns 0.637556
+rmse mean 0.870796 median 0.475392 p90_across_columns 1.341464
+r2 mean -261111185.541903 median -0.133462 p90_across_columns 0.007274
+r2_pooled -0.225798 note per-column r2 mean is mean of per-target R2; a few near-constant y columns (tiny ss_tot) make R2 explode negative; median and r2_pooled are safer headlines
+medae_column mean 0.344073 median 0.152026 p90_across_columns 0.374128
+abs_error_p90_within_column mean 2.187027 median 1.061642 p90_across_columns 4.582289
+explained_variance mean -108570527.577833 median -0.057605 p90_across_columns 0.052006
+max_abs_column mean 3.092083 median 1.650899 p90_across_columns 6.034614
+column_pearson mean -0.001056 median 0.001839 p90_across_columns 0.307391 fraction_nan 0.0
+row_cosine mean 0.993967 median 0.999079 p90_across_rows 0.999718
+
+top 30 y_columns by pearson (tie-break lower mae); per-column medae / p90|err| / mae
+1 mfcc_std_06 pearson 0.512748 mae 0.364512 medae 0.373766 abs_p90 0.58143
+2 chroma_entropy pearson 0.472546 mae 0.489354 medae 0.469159 abs_p90 0.947193
+3 mfcc_std_09 pearson 0.442174 mae 0.235007 medae 0.231468 abs_p90 0.455541
+4 chroma_mean_10 pearson 0.437598 mae 0.642053 medae 0.544534 abs_p90 1.939018
+5 jamendo_genre_synthpop pearson 0.437293 mae 0.222243 medae 0.075769 abs_p90 0.973432
+6 chroma_peakiness pearson 0.434932 mae 0.479768 medae 0.416558 abs_p90 1.110677
+7 jamendo_genre_improvisation pearson 0.434544 mae 0.364268 medae 0.19201 abs_p90 1.291949
+8 chroma_mean_08 pearson 0.434518 mae 0.633942 medae 0.396 abs_p90 2.304738
+9 jamendo_moodtheme_background pearson 0.43242 mae 0.495115 medae 0.148272 abs_p90 2.743441
+10 mfcc_std_14 pearson 0.430116 mae 0.42207 medae 0.436401 abs_p90 0.831637
+11 jamendo_genre_chanson pearson 0.429525 mae 0.221264 medae 0.07896 abs_p90 1.068549
+12 rms_p05 pearson 0.419832 mae 0.341735 medae 0.182321 abs_p90 2.219601
+13 jamendo_genre_jazz pearson 0.414593 mae 0.684968 medae 0.243125 abs_p90 6.196597
+14 spectral_zcr_p05 pearson 0.410557 mae 0.381021 medae 0.152855 abs_p90 1.98025
+15 jamendo_genre_electronic pearson 0.409831 mae 0.574439 medae 0.336438 abs_p90 2.406042
+16 mfcc_p95_18 pearson 0.404465 mae 0.357802 medae 0.367913 abs_p90 0.607013
+17 spectral_flatness_p05 pearson 0.396934 mae 0.167497 medae 0.113142 abs_p90 0.48026
+18 tempo pearson 0.39443 mae 0.327729 medae 0.3241 abs_p90 0.589253
+19 mfcc_p95_10 pearson 0.38255 mae 0.238221 medae 0.200826 abs_p90 0.55549
+20 spectral_rolloff_p05 pearson 0.379872 mae 0.358696 medae 0.346056 abs_p90 0.632694
+21 mfcc_p05_01 pearson 0.370783 mae 0.480428 medae 0.506789 abs_p90 0.96968
+22 jamendo_genre_eurodance pearson 0.36621 mae 0.18381 medae 0.074735 abs_p90 0.83378
+23 spectral_zcr_p50 pearson 0.360728 mae 0.443864 medae 0.265782 abs_p90 1.593311
+24 mfcc_p95_15 pearson 0.354248 mae 0.247546 medae 0.217328 abs_p90 0.567049
+25 jamendo_genre_popfolk pearson 0.352024 mae 0.271008 medae 0.059558 abs_p90 2.030733
+26 jamendo_genre_swing pearson 0.338543 mae 0.729176 medae 0.047204 abs_p90 10.680717
+27 spectral_centroid_std pearson 0.336062 mae 0.395192 medae 0.407276 abs_p90 0.702829
+28 jamendo_moodtheme_ballad pearson 0.331599 mae 0.136717 medae 0.106839 abs_p90 0.513612
+29 spectral_zcr_mean pearson 0.330786 mae 0.475482 medae 0.332867 abs_p90 1.721305
+30 mfcc_std_18 pearson 0.330239 mae 0.458054 medae 0.472504 abs_p90 0.830674
+wrote per-column metrics csv /content/drive/MyDrive/rubert_runs/run_007_transformer_window/per_column_metrics.csv
+
+retrieval hit rates
+rmse hit@ 35.0 percent 0.535897 hits 418 total 780 skipped_single_or_missing 0
+mae hit@ 35.0 percent 0.55 hits 429 total 780 skipped_single_or_missing 0
+cosine hit@ 35.0 percent 0.539744 hits 421 total 780 skipped_single_or_missing 0

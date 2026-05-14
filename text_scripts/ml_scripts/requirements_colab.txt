@@ -1,0 +1,8 @@
+numpy
+torch>=2.0
+transformers>=4.38
+safetensors
+scikit-learn
+python-dotenv>=1.0
+pyarrow
+psycopg

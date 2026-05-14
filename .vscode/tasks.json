@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Lyrata: AudioEnricher (.venv311, filtered stderr)",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "cd \"${workspaceFolder}\" && source .venv311/bin/activate && python music_scripts/AudioEnricher.py 2> >(grep -vi -E \"cudart|cublas|cufft|curand|cusolver|cusparse|cudnn\" | grep -i -E \"error|fatal|traceback\" >&2)"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Lyrata: AudioEnricher (.venv311, full logs)",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "cd \"${workspaceFolder}\" && source .venv311/bin/activate && python music_scripts/AudioEnricher.py"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
+

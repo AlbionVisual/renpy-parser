@@ -1,0 +1,74 @@
+{
+  "script": "transformer_window",
+  "train_metrics": {
+    "mae_macro": 0.5581916509163405,
+    "rmse_macro": 0.9028288125991821,
+    "r2_macro": 0.0772440206259489,
+    "medae_macro": 0.43291727491960047,
+    "evs_macro": 0.09880732744932175,
+    "max_abs_macro": 9.02498089298606,
+    "abs_p95_macro_mean": 1.4018867199635123,
+    "mae_across_columns_p95": 0.8248166782928246,
+    "column_pearson_mean": 0.2118613685218258,
+    "column_pearson_median": 0.04798658320124219,
+    "column_pearson_across_columns_p95": 0.6836264840194356,
+    "column_pearson_nan_frac": 0.0,
+    "row_cosine_mean": 0.9926292702718752,
+    "row_cosine_median": 0.9978100657463074,
+    "r2_pooled": 0.014570649980759742
+  },
+  "val_metrics": {
+    "mae_macro": 0.4999637322791496,
+    "rmse_macro": 0.7766936421394348,
+    "r2_macro": 0.2131688168272376,
+    "medae_macro": 0.3460704185301438,
+    "evs_macro": 0.23747508227825165,
+    "max_abs_macro": 3.716651692427695,
+    "abs_p95_macro_mean": 1.6070814735535515,
+    "mae_across_columns_p95": 0.5636967527838328,
+    "column_pearson_mean": 0.45788318025355385,
+    "column_pearson_median": 0.415242334522957,
+    "column_pearson_across_columns_p95": 0.8373642392827513,
+    "column_pearson_nan_frac": 0.0,
+    "row_cosine_mean": 0.9930673791441663,
+    "row_cosine_median": 0.9984279870986938,
+    "r2_pooled": 0.10779877140218086
+  },
+  "test_metrics": {
+    "mae_macro": 0.5446762711015098,
+    "rmse_macro": 0.8868584632873535,
+    "r2_macro": -203707376.35230672,
+    "medae_macro": 0.3788831288693473,
+    "evs_macro": -144410528.0,
+    "max_abs_macro": 3.120562339015305,
+    "abs_p95_macro_mean": 2.207342870982829,
+    "mae_across_columns_p95": 0.7233270211740195,
+    "column_pearson_mean": 0.0009068588004324224,
+    "column_pearson_median": 0.012492687426045847,
+    "column_pearson_across_columns_p95": 0.3118684232112259,
+    "column_pearson_nan_frac": 0.0,
+    "row_cosine_mean": 0.9936311662197113,
+    "row_cosine_median": 0.9986868798732758,
+    "r2_pooled": -0.5142325194232764
+  },
+  "retrieval": {
+    "rmse": {
+      "hits": 282,
+      "totals": 780,
+      "skipped": 0
+    },
+    "mae": {
+      "hits": 294,
+      "totals": 780,
+      "skipped": 0
+    },
+    "cosine": {
+      "hits": 341,
+      "totals": 780,
+      "skipped": 0
+    }
+  },
+  "epochs_ran": 100,
+  "best_val_mae_norm_macro": 0.39300140738487244,
+  "train_wall_seconds": 249.8875575990005
+}

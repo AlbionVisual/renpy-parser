@@ -1,0 +1,84 @@
+\documentclass[14pt]{report}
+\usepackage[english,russian]{babel}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage[unicode]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{indentfirst}
+\usepackage{mathtools}
+\definecolor{linkcolor}{rgb}{0.0,0.0,0.0}
+\definecolor{urlcolor}{rgb}{0.0,0.0,0.0}
+\definecolor{citecolor}{rgb}{0.0,0.0,0.0}
+\hypersetup{pdfstartview=FitH,colorlinks=true,linkcolor=linkcolor,citecolor=citecolor,urlcolor=urlcolor,filecolor=black}
+\usepackage[14pt]{extsizes}
+\usepackage[
+    left=30mm,
+    top=20mm,
+    right=10mm,
+    bottom=20mm
+]{geometry}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{afterpage}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{listings}
+\lstset{
+  basicstyle=\small\ttfamily,
+  breaklines=true,
+  columns=fullflexible,
+  keepspaces=true,
+  tabsize=4,
+  frame=single,
+  framerule=0.4pt,
+  xleftmargin=0.6em,
+  xrightmargin=0.4em,
+  aboveskip=0.75\baselineskip,
+  belowskip=0.6\baselineskip,
+}
+
+\renewcommand{\lstlistingname}{Листинг}
+
+\usepackage{csquotes}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{xurl}
+\usepackage{enumitem}
+
+\newcommand{\appa}[1]{\hyperlink{appa-i-#1}{(приложение~А,\,№\,#1)}}
+\captionsetup{labelsep=space}
+\addto\captionsrussian{\renewcommand{\figurename}{Рисунок}}
+\titleformat{\chapter}[display]
+{\centering\Large\bfseries}{\chaptertitlename\ \thechapter}{10pt}{\Large}
+\titlespacing*{\chapter}{5pt}{-20pt}{30pt}
+
+\titleformat{\section}[block]
+  {\large\bfseries}
+  {\thesection\ }{0pt}{}
+
+\addto\captionsrussian{%
+  \renewcommand{\contentsname}%
+    {\centering \large ОГЛАВЛЕНИЕ}%
+  \renewcommand{\chaptername}{ГЛАВА}
+  \renewcommand{\chaptertitlename}{ГЛАВА}
+  \renewcommand{\bibname}{\large СПИСОК ИСПОЛЬЗОВАННОЙ ЛИТЕРАТУРЫ}
+}
+
+\renewcommand{\baselinestretch}{1.2}
+
+\begin{document}
+\include{title}
+\tableofcontents
+\include{intro}
+\include{ch01_theory}
+\include{ch02_dataset}
+\include{ch03_training}
+\include{conclusion}
+\include{literature}
+\include{appendix}
+\end{document}

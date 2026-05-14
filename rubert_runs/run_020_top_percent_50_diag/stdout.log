@@ -1,0 +1,110 @@
+lstm raw_emb_dim 768 embedding_lags 4 in_dim 3840 rows 19174
+held_out_games_seed fixed 17
+
+TRAIN/TEST SPLIT BEFORE TRAINING
+seed 40
+split mode leave_games_out
+split test_fraction 0.2
+split test_games requested 3
+split held_out_games 3 ['MilgramSubstitution-DEMO-1.4.2-pc', 'ScarredSoul-0.2.0.0-pc', 'TheJesterAndThePrince_RU-2.5-pc']
+train rows 18394 games covered 38
+test rows 780 games covered 3
+train_test_index_overlap 0
+tune_split val_fraction 0.1
+refit_best_on_train_plus_val False
+lstm val_split tail tune rows 16537 val rows 1857 games tune 38 games val 38
+lstm index_overlap tune_val 0 tune_test 0 val_test 0
+lstm device cuda in_dim 3840 out_dim 320 lstm_hidden 1024 lstm_layers 2 params 28655936
+epoch 1 train_mse 1.001114 train_mae_norm_macro 0.479871 val_mae_norm_macro 0.507928 val_minus_train_mae_norm 0.028057 best_val_mae_norm_macro 0.507928 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 2 train_mse 0.994609 train_mae_norm_macro 0.441541 val_mae_norm_macro 0.468305 val_minus_train_mae_norm 0.026764 best_val_mae_norm_macro 0.468305 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 4 train_mse 1.161046 train_mae_norm_macro 0.4287 val_mae_norm_macro 0.451646 val_minus_train_mae_norm 0.022947 best_val_mae_norm_macro 0.451646 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 5 train_mse 0.978117 train_mae_norm_macro 0.450859 val_mae_norm_macro 0.478613 val_minus_train_mae_norm 0.027755 best_val_mae_norm_macro 0.451646 patience_val 1 / 15 patience_overfit_gap 0 / off
+epoch 10 train_mse 0.960765 train_mae_norm_macro 0.436081 val_mae_norm_macro 0.463068 val_minus_train_mae_norm 0.026987 best_val_mae_norm_macro 0.451646 patience_val 6 / 15 patience_overfit_gap 0 / off
+epoch 11 train_mse 0.937769 train_mae_norm_macro 0.408944 val_mae_norm_macro 0.43452 val_minus_train_mae_norm 0.025576 best_val_mae_norm_macro 0.43452 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 12 train_mse 0.905816 train_mae_norm_macro 0.383037 val_mae_norm_macro 0.406297 val_minus_train_mae_norm 0.02326 best_val_mae_norm_macro 0.406297 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 13 train_mse 0.875827 train_mae_norm_macro 0.376808 val_mae_norm_macro 0.392467 val_minus_train_mae_norm 0.015658 best_val_mae_norm_macro 0.392467 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 15 train_mse 0.894462 train_mae_norm_macro 0.396924 val_mae_norm_macro 0.387751 val_minus_train_mae_norm -0.009173 best_val_mae_norm_macro 0.387751 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 16 train_mse 0.90945 train_mae_norm_macro 0.350697 val_mae_norm_macro 0.375755 val_minus_train_mae_norm 0.025058 best_val_mae_norm_macro 0.375755 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 20 train_mse 0.839262 train_mae_norm_macro 0.377478 val_mae_norm_macro 0.397255 val_minus_train_mae_norm 0.019778 best_val_mae_norm_macro 0.375755 patience_val 4 / 15 patience_overfit_gap 0 / off
+epoch 24 train_mse 0.818074 train_mae_norm_macro 0.340031 val_mae_norm_macro 0.370298 val_minus_train_mae_norm 0.030267 best_val_mae_norm_macro 0.370298 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 25 train_mse 0.814654 train_mae_norm_macro 0.342068 val_mae_norm_macro 0.371324 val_minus_train_mae_norm 0.029255 best_val_mae_norm_macro 0.370298 patience_val 1 / 15 patience_overfit_gap 0 / off
+epoch 28 train_mse 0.808507 train_mae_norm_macro 0.334664 val_mae_norm_macro 0.370065 val_minus_train_mae_norm 0.0354 best_val_mae_norm_macro 0.370065 patience_val 0 / 15 patience_overfit_gap 0 / off
+epoch 30 train_mse 0.811294 train_mae_norm_macro 0.422214 val_mae_norm_macro 0.423779 val_minus_train_mae_norm 0.001565 best_val_mae_norm_macro 0.370065 patience_val 2 / 15 patience_overfit_gap 0 / off
+epoch 35 train_mse 0.985399 train_mae_norm_macro 0.445228 val_mae_norm_macro 0.473356 val_minus_train_mae_norm 0.028128 best_val_mae_norm_macro 0.370065 patience_val 7 / 15 patience_overfit_gap 0 / off
+epoch 40 train_mse 0.943752 train_mae_norm_macro 0.435612 val_mae_norm_macro 0.464746 val_minus_train_mae_norm 0.029134 best_val_mae_norm_macro 0.370065 patience_val 12 / 15 patience_overfit_gap 0 / off
+early stop: val metric patience exhausted
+lstm train_wall_seconds 83.313 stopped_epoch 43 best_val_mae_norm_macro 0.370065
+
+LSTM Regression metrics ON TRAIN (fit set, denormalized Y)
+mae mean 0.454811 median 0.12938 p90_across_columns 0.46033
+rmse mean 0.823085 median 0.447674 p90_across_columns 0.770444
+r2 mean 0.198058 median 0.036325 p90_across_columns 0.680423
+r2_pooled 0.025291 note per-column r2 mean is mean of per-target R2; a few near-constant y columns (tiny ss_tot) make R2 explode negative; median and r2_pooled are safer headlines
+medae_column mean 0.273934 median 0.053568 p90_across_columns 0.217361
+abs_error_p90_within_column mean 1.371235 median 0.393055 p90_across_columns 1.709955
+explained_variance mean 0.200073 median 0.03815 p90_across_columns 0.682966
+max_abs_column mean 8.945365 median 5.587691 p90_across_columns 9.519402
+column_pearson mean 0.361769 median 0.229151 p90_across_columns 0.826992 fraction_nan 0.0
+row_cosine mean 0.993852 median 0.998693 p90_across_rows 0.99987
+
+LSTM metrics ON VALIDATION (denormalized Y)
+mae mean 0.497835 median 0.152168 p90_across_columns 0.497499
+rmse mean 0.796538 median 0.435107 p90_across_columns 0.851468
+r2 mean 0.164824 median 0.024898 p90_across_columns 0.650753
+r2_pooled 0.045648 note per-column r2 mean is mean of per-target R2; a few near-constant y columns (tiny ss_tot) make R2 explode negative; median and r2_pooled are safer headlines
+medae_column mean 0.337135 median 0.057336 p90_across_columns 0.233005
+abs_error_p90_within_column mean 1.762388 median 1.033214 p90_across_columns 1.840425
+explained_variance mean 0.190433 median 0.053004 p90_across_columns 0.651647
+max_abs_column mean 3.734638 median 2.451115 p90_across_columns 4.733354
+column_pearson mean 0.376082 median 0.29695 p90_across_columns 0.807815 fraction_nan 0.0
+row_cosine mean 0.993172 median 0.998377 p90_across_rows 0.999875
+
+LSTM Regression metrics ON TEST ONLY
+mae mean 0.473241 median 0.254712 p90_across_columns 0.63328
+rmse mean 0.818114 median 0.479544 p90_across_columns 1.309274
+r2 mean -57021948.359024 median -0.148362 p90_across_columns -0.006952
+r2_pooled -0.116053 note per-column r2 mean is mean of per-target R2; a few near-constant y columns (tiny ss_tot) make R2 explode negative; median and r2_pooled are safer headlines
+medae_column mean 0.269366 median 0.08628 p90_across_columns 0.240895
+abs_error_p90_within_column mean 2.122313 median 1.153351 p90_across_columns 4.596569
+explained_variance mean -27411495.670624 median -0.009168 p90_across_columns 0.03306
+max_abs_column mean 3.007775 median 1.614073 p90_across_columns 5.963876
+column_pearson mean 0.121538 median 0.113087 p90_across_columns 0.497596 fraction_nan 0.0
+row_cosine mean 0.993794 median 0.998794 p90_across_rows 0.999871
+
+top 30 y_columns by pearson (tie-break lower mae); per-column medae / p90|err| / mae
+1 mfcc_p05_15 pearson 0.606979 mae 0.147314 medae 0.104279 abs_p90 0.281421
+2 mfcc_p05_19 pearson 0.606056 mae 0.096353 medae 0.100239 abs_p90 0.15621
+3 mfcc_std_10 pearson 0.603081 mae 0.130602 medae 0.108084 abs_p90 0.278012
+4 mfcc_std_18 pearson 0.60154 mae 0.159363 medae 0.109868 abs_p90 0.353016
+5 mfcc_p05_14 pearson 0.599501 mae 0.09739 medae 0.068987 abs_p90 0.226859
+6 mfcc_std_14 pearson 0.597468 mae 0.08731 medae 0.057459 abs_p90 0.234655
+7 mfcc_p95_00 pearson 0.592744 mae 0.142432 medae 0.106073 abs_p90 0.254277
+8 mfcc_p05_12 pearson 0.591298 mae 0.086221 medae 0.083617 abs_p90 0.153154
+9 tempo pearson 0.589384 mae 0.133368 medae 0.145996 abs_p90 0.234828
+10 mfcc_std_16 pearson 0.587514 mae 0.097496 medae 0.068209 abs_p90 0.234906
+11 mfcc_std_11 pearson 0.585804 mae 0.10299 medae 0.084592 abs_p90 0.211745
+12 mfcc_p05_00 pearson 0.581311 mae 0.088926 medae 0.098496 abs_p90 0.141205
+13 mfcc_p05_18 pearson 0.578596 mae 0.098848 medae 0.102104 abs_p90 0.191668
+14 mfcc_std_07 pearson 0.577494 mae 0.099917 medae 0.065357 abs_p90 0.25401
+15 mfcc_std_02 pearson 0.574295 mae 0.086128 medae 0.082689 abs_p90 0.144613
+16 mfcc_std_19 pearson 0.570168 mae 0.088641 medae 0.047236 abs_p90 0.245102
+17 mfcc_std_12 pearson 0.569404 mae 0.070441 medae 0.041838 abs_p90 0.190372
+18 spectral_bandwidth_p50 pearson 0.566041 mae 0.146491 medae 0.182361 abs_p90 0.254158
+19 mfcc_p05_09 pearson 0.56505 mae 0.142741 medae 0.11812 abs_p90 0.229369
+20 mfcc_std_09 pearson 0.560391 mae 0.079648 medae 0.061931 abs_p90 0.178904
+21 mfcc_p05_01 pearson 0.55768 mae 0.091673 medae 0.09096 abs_p90 0.157598
+22 spectral_centroid_p05 pearson 0.555123 mae 0.079838 medae 0.078108 abs_p90 0.150813
+23 mfcc_p05_13 pearson 0.54687 mae 0.06869 medae 0.0525 abs_p90 0.144882
+24 mfcc_p95_18 pearson 0.544387 mae 0.101196 medae 0.067124 abs_p90 0.23628
+25 mfcc_p95_03 pearson 0.538616 mae 0.068937 medae 0.047369 abs_p90 0.18065
+26 mfcc_p05_17 pearson 0.537774 mae 0.129457 medae 0.102773 abs_p90 0.253933
+27 spectral_centroid_mean pearson 0.526977 mae 0.073096 medae 0.06245 abs_p90 0.143978
+28 spectral_rolloff_p50 pearson 0.517435 mae 0.057654 medae 0.040412 abs_p90 0.156667
+29 mfcc_std_06 pearson 0.509125 mae 0.058918 medae 0.041155 abs_p90 0.14897
+30 mfcc_p05_07 pearson 0.506466 mae 0.129852 medae 0.171269 abs_p90 0.22923
+wrote per-column metrics csv /content/drive/MyDrive/rubert_runs/run_020_top_percent_50_diag/per_column_metrics.csv
+
+retrieval hit rates
+rmse hit@ 50.0 percent 0.65641 hits 512 total 780 skipped_single_or_missing 0
+mae hit@ 50.0 percent 0.662821 hits 517 total 780 skipped_single_or_missing 0
+cosine hit@ 50.0 percent 0.705128 hits 550 total 780 skipped_single_or_missing 0
